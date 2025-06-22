@@ -2,24 +2,6 @@ import json
 import requests
 
 
-def main():
-    # This is my API key
-    api_key = "api-key-here"
-
-    # Create RiotAPIWrapper object using api_key
-    api_wrapper = RiotAPIWrapper(api_key)
-
-    response_dict = api_wrapper.api_account_v1('Minsoo', 'NA 1')
-
-    print(f'Got the puuid: {response_dict["puuid"]}')
-    print(f'For the user : {response_dict["gameName"]}#{response_dict["tagLine"]} ')
-
-    response_dict = api_wrapper.api_account_v1('Soju', 'KR33')
-
-    print(f'Got the puuid: {response_dict["puuid"]}')
-    print(f'For the user : {response_dict["gameName"]}#{response_dict["tagLine"]} ')
-
-
 # Riot API Wrapper class (Object Oriented Programming)
 class RiotAPIWrapper:
     def __init__(self, api_key):
